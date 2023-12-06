@@ -14,7 +14,7 @@ namespace ConsoleApp4
         static void Main()
         {
             bool is64 = Environment.Is64BitOperatingSystem;
-            int time_windows = Environment.TickCount ;
+            int time_windows = Environment.TickCount;
             var os = Environment.OSVersion;
             Console.WriteLine($"Текущая дата {DateTime.Now}");
             Console.WriteLine($"Операционная система: {os}");
@@ -23,22 +23,18 @@ namespace ConsoleApp4
             Console.WriteLine($"Версия: {Environment.Version}");
             Console.WriteLine($"Как давно работает Windows в днях : {time_windows / 86400}");
 
-            
+
             {
                 if (is64 == true)
-                
+
                     Console.WriteLine($"64 Битная версия Windows : Да");
 
+                else 
+                { 
+                    Console.WriteLine($"64 Битная версия Windows : Нет");
 
+                }
 
-
-
-
-                 else if (is64 == false) {
-                        Console.WriteLine($"64 Битная версия Windows : Нет");
-
-                    }
-                
 
 
             }
@@ -48,7 +44,7 @@ namespace ConsoleApp4
 
 
 
-
+        
         }
     }
 }

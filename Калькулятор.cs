@@ -11,15 +11,27 @@ namespace consoleApp2
         {
             double a;
             double b;
+            double degree;
 
             Console.Write("Введите число:\t");
             a = Convert.ToDouble(Console.ReadLine());
 
             Console.Write("Введите знак для осуществления операции: ");
             String oper = Console.ReadLine();
-            if (oper == "degree" || oper == "power" || oper == "возвести в степень" || oper == "возвести" || oper == "**")
+
+            if (oper == "sqr" || oper == "корень" || oper == "sqrt" || oper == "root")
             {
-                Console.WriteLine($"Ответ :\t {a * a}"); Environment.Exit(0);
+                Console.WriteLine($"Ответ : {Math.Sqrt(a)}"); Environment.Exit(0);
+
+            }
+
+
+                if (oper == "degree" || oper == "power" || oper == "возвести в степень" || oper == "возвести" || oper == "**")
+            {
+                Console.Write("Введите степень: ");
+            degree = Convert.ToDouble(Console.ReadLine());
+                
+                Console.WriteLine($"Ответ :\t {Math.Pow(a,degree)}"); Environment.Exit(0);
             }
             
             Console.Write("Введи второе число: ");
